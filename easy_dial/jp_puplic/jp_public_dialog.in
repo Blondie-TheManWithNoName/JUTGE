@@ -1,0 +1,40 @@
+##!----------------------------------------------
+##!                                              
+##! DIALOG
+##!
+##!----------------------------------------------
+##1 ErrNombreIncorrecto
+##!----------------------------------------------
+##!
+##!-------------------------------------
+##5 easy_dial AMB CINC TELEFONS
+##! Exemple de l'enunciat de la practica
+##!-------------------------------------
+##!
+init rc call_registry
+assigna_nom 1001 MARIA
+assigna_nom 1002 JOSEP
+assigna_nom 1003 MAR
+assigna_nom 1004 MIQUEL
+assigna_nom 1005 MARTA
+registra 1001
+registra 1001
+registra 1001
+registra 1002
+registra 1002
+registra 1002
+registra 1002
+registra 1002
+registra 1003
+registra 1004
+registra 1004
+registra 1004
+registra 1004
+registra 1005
+registra 1005
+##!
+##!
+init d easy_dial rc
+dialog MAR<R<<
+##!
+##!
