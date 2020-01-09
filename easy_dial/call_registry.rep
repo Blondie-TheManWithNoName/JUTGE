@@ -1,0 +1,62 @@
+struct node_hash {
+	phone _p;		// telèfon
+	node_hash* _seg;// punter al _següent node 
+};
+node_hash** _taula;	// taula amb punters
+nat _M;				// mida taula
+nat _quants;		// elements a la taula
+
+
+// Funció auxiliar per efectuar la destrucció d'un call_registry
+// Cost: O(n)
+void elimina(node_hash* &n);
+
+// Funció de redispersió, multiplica la _M per 2 quan els elements que hi
+// ha a la taula sobrepasen el 75%. Cost: O(n), si tenim bona dispersió
+void redispersio() throw() {
+	_M = (_M * 2) - 1;		// li restem 1 per a que la _M
+							// es conservi com un nombre primer
+							// i per tant millorar la dispersió
+	node_hash** t = new node_hash*[_M];
+	for (nat i = 0; i < _M; i++)
+		t[i] = NULL;
+
+
+	for (nat i = 0; i < _M/2; i++)
+	{
+		node_hash* n = _taula[i];
+		while (n != NULL)
+		{
+			node_hash* aux = n -> _seg;
+			insereix(t, n);
+			n = aux;
+		}
+	}
+	delete[] _taula;
+	_taula = t;
+}
+
+void insereix(node_hash** t, node_hash* n) throw() {
+	int x = dispersio(n -> _p.numero());
+	n -> _seg = t[x];
+	t[x] = n;
+}
+
+// Funció de dispersió
+int dispersio(const int num) const {
+	int x = num;
+    x = ((x >> 16) ^ x) * 0x45d9f3b;
+    x = ((x >> 16) ^ x) * 0x45d9f3b;
+    x = (x >> 16) ^ x;
+    return x%_M;
+}
+
+
+/******* DOCUMENTACIÓ *******\
+
+Hem escollit Hash Tables amb dispersió oberta i amb sinonims encadenats indirectes.
+Creiem que una Hash Table es una bona opció perquè donat un número a buscar
+la seva búsqueda a la taula es de cost constant, i després buscar a la llista de nodes 
+si tenim una bona dispersió serà cost log(n), per tant complim els requeriments.
+
+*/
