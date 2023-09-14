@@ -1,8 +1,0 @@
-nat _num;
-nat _freq;
-string _nom;
-
-/******* DOCUMENTACIÓ *******\
-
-Aquesta classe es molt simple, només ens calen tres variables.
-*/
