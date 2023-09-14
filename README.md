@@ -6,7 +6,7 @@ Programming Problems from www.jutge.org solved in **C++**
 
 - P13827 [Code](https://github.com/Blondie-TheManWithNoName/JUTGE/blob/master/P13827.cpp) [Jutge](https://jutge.org/problems/P13827_en)
 
-- **P18593 - Sum of trees** [Code](https://github.com/Blondie-TheManWithNoName/JUTGE/blob/master/P18593.cpp)  -  [Jutge](https://jutge.org/problems/P18593_en)
+- **_P18593_ - Sum of trees:** [Code](https://github.com/Blondie-TheManWithNoName/JUTGE/blob/master/P18593.cpp)  -  [Jutge](https://jutge.org/problems/P18593_en)
 - P19515 [Code](https://github.com/Blondie-TheManWithNoName/JUTGE/blob/master/P19515.cpp) [Jutge](https://jutge.org/problems/P19515_en)
 - P40558 [Code](https://github.com/Blondie-TheManWithNoName/JUTGE/blob/master/P40558.cpp) [Jutge](https://jutge.org/problems/P40558_en)
 - P52205 [Code](https://github.com/Blondie-TheManWithNoName/JUTGE/blob/master/P52205.cpp) [Jutge](https://jutge.org/problems/P52205_en)
