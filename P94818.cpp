@@ -2,6 +2,7 @@
 #include <cstddef>
 using namespace std;
 
+
 template <typename T>
 class Abin {
   private:
@@ -258,43 +259,39 @@ typename Abin<T>::node* Abin<T>::insereix_bst(node* &n, const T &k)
 }
 
 
+#include <iostream>
+#include <cstddef>
+using namespace std;
+
+
+
+int lenghtOfInt(int n)
+{
+  if (n == 0) return 1;
+  int lengthCount = 0;
+  for(; n != 0; n /= 10, ++lengthCount);
+  return lengthCount;
+
+}
+
+
 void mostra(Abin<int>::iterador it, Abin<int>::iterador end, int i)
 {
-	if (it != end)
-	{
-		mostra(it.fdret(), end, i + 1);
-		for (int j = 1; j < i; ++j)
-			cout << "          ";
-		int n = *it.arbre().arrel();
-		int o = 0;
-		if (n == 0)
-			++o;
-		else
-		{
-			while (n > 0)
-			{
-				++o;
-				n /= 10;
-			}
-		}
-		for (int j = 0; j <= 11 - o and i > 0; ++j)
-			cout << " ";
-		cout << "        " << *it.arbre().arrel() << endl;
-		mostra(it.fesq(), end, i + 1);
-	}
+    if(it != end) {
+        mostra(it.fdret(), end, i + 1);
+
+        for (int j=0; j < i; ++j) cout << "          ";
+        for (int j=lenghtOfInt(*it); j < 10 ; ++j) cout << " ";
+        cout << (*it) << endl;
+        mostra(it.fesq(), end, i + 1);   
+    }
 }
 
-void mostra(Abin<int> a)
+int main()
 {
-	mostra(a.arrel(), a.final(), 0);
-}
 
-int main() {
-	int n;
-	Abin <int> a;
-	while (cin >> n)
-	{
-		a.insereix_bst(n);
-	}
-	mostra(a);
+    int n;
+    Abin <int> a;
+    while(cin >> n) a.insereix_bst(n);
+    mostra(a.arrel(), a.final(), 0);
 }
