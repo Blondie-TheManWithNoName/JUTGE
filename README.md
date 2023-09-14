@@ -1,7 +1,7 @@
 # JUTGE
 Programming Problems from www.jutge.org solved in **C++**
-_
-_
+<br>
+<br>
 - **_P13304_** - Separated investment with stacks: [Code](https://github.com/Blondie-TheManWithNoName/JUTGE/blob/master/P13304.cpp) [Jutge](https://jutge.org/problems/P13304_en)
 - **_P13827_** - AVL trees: [Code](https://github.com/Blondie-TheManWithNoName/JUTGE/blob/master/P13827.cpp) [Jutge](https://jutge.org/problems/P13827_en)
 - **_P18593_** - Sum of trees: [Code](https://github.com/Blondie-TheManWithNoName/JUTGE/blob/master/P18593.cpp)  -  [Jutge](https://jutge.org/problems/P18593_en)
